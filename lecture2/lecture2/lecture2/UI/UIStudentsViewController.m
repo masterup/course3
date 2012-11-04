@@ -7,12 +7,21 @@
 //
 
 #import "UIStudentsViewController.h"
+#import "StudentsApi.h"
 
 @interface UIStudentsViewController ()
-
+- (void)loadDataWithModel:(StudentsApi *) api;
 @end
 
 @implementation UIStudentsViewController
+
+@synthesize studentsApi = _studentsApi;
+
+-(void)dealloc {
+    [_studentsApi release];
+    
+    [super dealloc];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,8 +35,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    studentsApi = [[StudentsApi alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,7 +71,7 @@
         NSLog(@"reusing existing cell");
     }
     
-    cell.textLabel.text = [studentsApi studentNameForPath:indexPath];
+//    cell.textLabel.text = [studentsApi studentNameForPath:indexPath];
     
     return cell;
 }

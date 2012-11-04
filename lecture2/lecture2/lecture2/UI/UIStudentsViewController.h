@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StudentsApi.h"
+
+@class StudentsApi;
 
 @interface UIStudentsViewController : UITableViewController {
-    StudentsApi *studentsApi;
+//    StudentsApi *_studentsApi;
 }
 
-
+@property (nonatomic, retain) StudentsApi *studentsApi;
+- (void)loadData;
 @end

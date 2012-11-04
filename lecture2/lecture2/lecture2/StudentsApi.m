@@ -14,4 +14,8 @@
     return [NSString stringWithFormat:@"Student name %d", studentPath.row];
 }
 
+-(NSArray *)searchForStudents:(NSString *)name {
+    return nil;
+}
+
 @end

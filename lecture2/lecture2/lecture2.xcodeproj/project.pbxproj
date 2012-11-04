@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10503DA81637173E00112CB4 /* UIDevice+UniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 10503DA71637173E00112CB4 /* UIDevice+UniqueIdentifier.m */; };
+		10503DAB16371A9D00112CB4 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 10503DAA16371A9D00112CB4 /* A.m */; };
+		10503DAE16371AA700112CB4 /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = 10503DAD16371AA700112CB4 /* B.m */; };
 		10610ECE1632A74200A9E890 /* UIStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10610ECC1632A74200A9E890 /* UIStudentsViewController.m */; };
 		10610ECF1632A74200A9E890 /* UIStudentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10610ECD1632A74200A9E890 /* UIStudentsViewController.xib */; };
 		1069BD3916329A2F00C479C7 /* StudentsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1069BD3816329A2F00C479C7 /* StudentsApi.m */; };
@@ -22,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10503DA61637173E00112CB4 /* UIDevice+UniqueIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UniqueIdentifier.h"; sourceTree = "<group>"; };
+		10503DA71637173E00112CB4 /* UIDevice+UniqueIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UniqueIdentifier.m"; sourceTree = "<group>"; };
+		10503DA916371A9D00112CB4 /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		10503DAA16371A9D00112CB4 /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		10503DAC16371AA700112CB4 /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B.h; sourceTree = "<group>"; };
+		10503DAD16371AA700112CB4 /* B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = B.m; sourceTree = "<group>"; };
 		10610ECB1632A74200A9E890 /* UIStudentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIStudentsViewController.h; path = UI/UIStudentsViewController.h; sourceTree = "<group>"; };
 		10610ECC1632A74200A9E890 /* UIStudentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIStudentsViewController.m; path = UI/UIStudentsViewController.m; sourceTree = "<group>"; };
 		10610ECD1632A74200A9E890 /* UIStudentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UIStudentsViewController.xib; path = UI/UIStudentsViewController.xib; sourceTree = "<group>"; };
@@ -56,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10503DA4163716F700112CB4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				10503DA61637173E00112CB4 /* UIDevice+UniqueIdentifier.h */,
+				10503DA71637173E00112CB4 /* UIDevice+UniqueIdentifier.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		10610ED11632A76F00A9E890 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +89,10 @@
 			children = (
 				1069BD3716329A2F00C479C7 /* StudentsApi.h */,
 				1069BD3816329A2F00C479C7 /* StudentsApi.m */,
+				10503DA916371A9D00112CB4 /* A.h */,
+				10503DAA16371A9D00112CB4 /* A.m */,
+				10503DAC16371AA700112CB4 /* B.h */,
+				10503DAD16371AA700112CB4 /* B.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -105,6 +127,7 @@
 		10CC117B1632998D0004A59C /* lecture2 */ = {
 			isa = PBXGroup;
 			children = (
+				10503DA4163716F700112CB4 /* Extension */,
 				10610ED21632A78600A9E890 /* Model */,
 				10610ED11632A76F00A9E890 /* UI */,
 				10CC11841632998D0004A59C /* AppDelegate.h */,
@@ -198,6 +221,9 @@
 				10CC11861632998D0004A59C /* AppDelegate.m in Sources */,
 				1069BD3916329A2F00C479C7 /* StudentsApi.m in Sources */,
 				10610ECE1632A74200A9E890 /* UIStudentsViewController.m in Sources */,
+				10503DA81637173E00112CB4 /* UIDevice+UniqueIdentifier.m in Sources */,
+				10503DAB16371A9D00112CB4 /* A.m in Sources */,
+				10503DAE16371AA700112CB4 /* B.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

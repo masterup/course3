@@ -1,80 +1,27 @@
 //
 //  AppDelegate.m
-//  lecture2
+//  LazyImages
 //
-//  Created by Igor Tomych on 10/20/12.
+//  Created by Igor Tomych on 11/3/12.
 //  Copyright (c) 2012 MasterUp. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "UIStudentsViewController.h"
-#import "StudentsApi.h"
 
-#import "A.h"
-#import "B.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    self.window.rootViewController = nav;
     
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    
-    A* a = [[A alloc] init];
-    A* b = [[B alloc] init];
-    
-
-    
-    if ([a respondsToSelector:@selector(say)]) {
-        [a say];
-    }
-
-    if ([b respondsToSelector:@selector(say)]) {
-        [b say];
-    }
-    
-    if (![a respondsToSelector:@selector(bullShit)]) {
-        NSLog(@"not responding");
-    }
-    
-    if ([b respondsToSelector:@selector(bullShit:)]) {
-        [b bullShit:@"zz"];
-    }
-    
-    if ([b respondsToSelector:@selector(bullShit)]) {
-        [b bullShit];
-    }
-    
-    UIStudentsViewController *controller = [[UIStudentsViewController alloc] initWithNibName:@"UIStudentsViewController" bundle:nil];
-    
-    //UIStudentsViewController *controller = nil;
-    
-    NSLog(@"%@", [[UIDevice currentDevice] uniqueIdentifier]);
-    
-    StudentsApi* model = [[StudentsApi alloc] init];
-    
-    NSLog(@"%d", [model retainCount]);
-    controller.studentsApi = model;
-    
-    //[controller loadData];
-    
-    NSLog(@"%d", [model retainCount]);
-    
-    self.window.rootViewController = controller;
-
-    
-
-    [controller release];
-    
     return YES;
 }
 
